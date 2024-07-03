@@ -1,0 +1,71 @@
+#hero-shape {
+  position: absolute;
+  width: 26vw;
+  height: 26vw;
+  right: 0;
+  top: 0;
+}
+
+#hero-1 {
+  /* background-color: #FE320A; */
+  background-color: transparent;
+  height: 100%;
+  width: 100%;
+  border-top-left-radius: 50%;
+  border-bottom-left-radius: 50%;
+  filter: blur(10px);
+  position: absolute;
+}
+
+
+#hero-2 {
+  background: linear-gradient(#1eb533, #0ddb5f);
+
+  height: 15vw;
+  width: 15vw;
+  border-radius: 50%;
+  position: absolute;
+  animation-name: anime2;
+  animation-duration: 5s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  filter: blur(25px);
+}
+
+
+#hero-3 {
+  background: linear-gradient(#1eb533, #0ddb5f);
+  height: 15vw;
+  position: absolute;
+  width: 15vw;
+  border-radius: 50%;
+  filter: blur(25px);
+  animation-name: anime1;
+  animation-duration: 5s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+
+
+
+@keyframes anime1 {
+  from {
+      transform: translate(30vw, 30vw);
+  }
+
+  to {
+      transform: translate(-80vw, 5vw);
+  }
+}
+
+@keyframes anime2 {
+  from {
+      transform: translate(0vw, 0vw);
+  }
+
+  to {
+      transform: translate(-80vw, 35vw);
+  }
+}
