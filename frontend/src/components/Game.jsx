@@ -69,10 +69,10 @@ function App() {
 
   const handleGameOver = (result) => {
     if (result === 'draw') {
-      toast('It\'s a draw!');
+      alert('It\'s a draw!');
     } else {
       const winner = result === 'X' ? 'Player 1' : 'Player 2'; 
-      toast(`${winner} wins!`);
+      alert(`${winner} wins!`);
     }
     
     const shouldReset = window.confirm("Do you want to play again?");
@@ -225,14 +225,14 @@ function App() {
             Room: {roomName}
           </div>
           <div className="mb-4 flex gap-2 items-center justify-center text-white   font-bold font-serif">
-           <p>Players:</p>  {name.map((player, index) => (<div className='flex gap-1' key={index}>
+           <p>Players:</p>  {name.map((player, index) => (<div className='flex flex-wrap gap-1' key={index}>
               <span className='text-white' ><span className='text-4xl text-blue-800'>{index + 1}:</span> {player}</span>
               <div className='w-[60px] h-[60px] rounded-full border '><img className='w-full h-full rounded-full' src={profile[index]}></img></div></div>
             ))}
             
           </div >
           <div className='flex  justify-center items-center gap-2 flex-wrap px-[3vw]  pt-2  '>
-                    <div className="grid grid-cols-3 gap-2 mb-4  ">
+                    <div className="grid grid-cols-3 gap-2 lg:mb-4 mb-[2px] ">
                       {board.map((cell, index) => (
                         <div key={index} className="border-[3px] border-black rounded-md hover:bg-[rgba(0,0,0,0.3)] hover:scale-[1.1] lg:w-[100px] lg:h-[100px] w-[60px] h-[60px] p-2 text-3xl text-center text-black flex justify-center items-center cursor-pointer"
                           onClick={() => makeMove(index)}>
@@ -251,7 +251,7 @@ function App() {
         </div>
       )}
       
-         <div className='fixed bottom-0 left-0 w-full px-10 py-4 '>
+         <div className='relative lg:fixed bottom-0 left-0 w-full px-10 py-4 '>
              <div className='flex flex-col flex-wrap items-center text-center justify-center text-red-500'>
               <p className='lg:text-[18px] text-[12px]'>sumit@iitm<span className='text-red-500 lg:text-[20px] text-[12px]'>-2024</span >-Present < FaInstagram  className='  inline'/> <FaFacebook  className='  inline'/>  </p>
               <p className='lg:text-[18px] text-[12px]'>b22137@students.iitmandi.ac.in Get in Touch for more details 88405XXXXX</p>

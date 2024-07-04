@@ -20,7 +20,7 @@ const Login = () => {
 
   return (
     <div className='p-4 h-screen flex justify-center items-center bg-[url("back.jpeg")] bg-no-repeat bg-cover bg-center'>
-    <div className='flex flex-col justify-center items-center min-w-96 mx-auto'>
+    <div className='flex flex-col justify-center items-center lg:min-w-96 min-w-70 mx-auto'>
         <div className=' border-solid border-[1px] border-white w-full p-6 rounded-lg shadow-md bg-gray-400 bg-clip-padding backdrop-filter backdrop-blur-lg bg-opacity-0 '>
             <h1 className='text-3xl font-semibold text-center text-gray-600'>Login
                 <span className='text-blue-800'>TTToe</span>
